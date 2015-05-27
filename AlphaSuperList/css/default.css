@@ -1,0 +1,658 @@
+/*
+**  MarcAlfa - default.css
+**
+*/
+
+
+
+
+/* Prevent elements to be highlighted on tap */
+/*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
+
+/* Prevent native touch events on Windows */
+/*-ms-touch-action: none;*/
+
+/*
+* BOX-SIZING *******************************
+* La proprietà 'box-sizing: border-box;' per fare in modo che gli attributi 'width' ed 'height'
+* per ogni elemento debbano comprendere anche il suo spazio interno ('padding') ed il bordo
+*/
+/**, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }*/
+
+
+/* *************************************/
+/* HTML & BODY ********************************/
+/* *************************************/
+html, body 
+{	
+	/*width: 100%;*/
+	height: 100%;
+
+	padding: 0; 
+	margin: 0;
+  	border: 0;
+    /*font usato*/	
+	font-family: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  	font-size: 1em;
+	/*font-weight: 100;*/
+	color: black;
+	background-color: white;
+	line-height: 0.7;
+
+	/* Prevent text resize on orientation change, useful for web-apps */
+/*	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+*/
+
+
+	/*tutto NOT SELECTABLE*/
+   	-webkit-touch-callout: none;
+    -webkit-user-select: none;		/* Chrome all / Safari all */
+    -khtml-user-select: none;
+    -moz-user-select: none;			/* Firefox all */
+    -ms-user-select: none;			/* IE 10+ */
+	-o-user-select: none;			/* No support for these yet, use at own risk */
+    user-select: none;	  			/* No support for these yet, use at own risk */
+
+	overflow: hidden;
+
+}
+
+/* *************************************/
+/* CLEAR ********************************/
+/* *************************************/
+.float_clear:after 
+{
+  	clear: both;
+  	content: "";
+  	display: block;
+  	height: 0 ;
+  	visibility: hidden;
+}
+
+/* *************************************/
+/*ALPHA*/
+/* *************************************/
+.alpha-nascosto {
+	display: none;	
+}
+.alpha-cursor-pointer {
+	cursor: pointer;	
+}
+.alpha-selezionabile {
+	/*SELECTABLE*/
+   	-webkit-touch-callout: default;
+    -webkit-user-select: text;		/* Chrome all / Safari all */
+    -khtml-user-select: text;
+    -moz-user-select: text;			/* Firefox all */
+    -ms-user-select: text;			/* IE 10+ */
+	-o-user-select: text;			/* No support for these yet, use at own risk */
+    user-select: text;	  			/* No support for these yet, use at own risk */
+}
+
+/* DIV quando APP NON disponibile ********/
+#app_no_ok {
+	/*width: 90%;*/
+	/*height: 90%;*/
+	text-align: center;
+	padding-top: 16px;
+}
+
+/*ruoto solo questa icona di font-awesome*/
+.fa-sign-in {
+ 	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/* *************************************/
+/* H1 ********************************/
+/* *************************************/
+h1
+{
+	color:red;
+	text-align: center;
+	font-size: 140%;
+}
+h2
+{
+	font-size: 120%;
+}
+h3
+{
+	font-size: 110%;
+}
+h4
+{
+	font-size: 105%;
+}
+
+/* *************************************/
+/*tutti i tag A */
+/* *************************************/
+a {
+	color: black;
+	text-decoration: none;
+	/*text-shadow: 1px 1px 2px white;*/
+	display: inline-block;
+}
+a:hover 
+/*,a:active*/
+{
+	color: black;
+	text-decoration: none;
+}
+
+
+/*(source: http://angular-ui.github.io/bootstrap/)
+Original Bootstrap's CSS depends on empty href attributes to style cursors for several components (pagination, tabs etc.). 
+But in AngularJS adding empty href attributes to link tags will cause unwanted route changes. This is why we need to remove 
+empty href attributes from directive templates and as a result styling is not applied correctly. 
+The remedy is simple, just add the following styling to your application:
+*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+/* *************************************/
+/* MODAL *******************************/
+/* *************************************/
+.modal-body {
+	text-align: center;
+	background-color: #00838F;
+	color: #fff;	
+}
+.modal-footer .row div {
+	text-align: center;
+	cursor: pointer;
+}
+
+/* *************************************/
+/* ALERT *******************************/
+/* *************************************/
+#msg_alert {
+	z-index: 99;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/*sovrascrive bootstrap*/
+#msg_alert .alert {
+	font-size: 80%;
+	font-family: courier new;
+
+	padding: 4px 8px 4px 8px;
+
+	width: 60%;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	/*color: #fff;*/
+	/*background-color: #000;*/
+	/*border-color: transparent;*/
+
+}
+#msg_alert .alert:focus {
+	outline: 0;
+}
+/*fine sovrascrive bootstrap*/
+
+
+
+/* *************************************/
+/* MAIN ********************************/
+/* *************************************/
+#main {
+	
+	height: 100%;
+	margin: 0 auto;
+
+	overflow: hidden;
+
+}
+
+
+/* *************************************/
+/* PAGINA ******************************/
+/* *************************************/
+#pagina {
+	padding: 0;
+	/*width: 100%;*/
+	/*height: auto;*/
+	/*height: auto;*/
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	overflow: hidden;	
+}
+
+/*sovrascrive bootstrap, rendo il contenitore largo al massimo il 100%, non so perche' devo farlo ma funziona*/
+#pagina .row {
+	max-width:100%;
+  	padding:0;
+  	margin-left: 0;
+}
+
+
+
+/* *************************************/
+/* TOP ********************************/
+/* *************************************/
+#contentTopMaster {
+	z-index: 10;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	overflow: hidden;
+
+	border-radius: 0; 
+  	border-bottom: 1px solid #bbb;
+  	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+#pagina #top {
+	height: 52px;
+}
+	/*tutte le colonne*/
+	#top .colonna {
+		height: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		font-size: 100%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	/*colonna 1 topMenu*/
+	#top #topMenu {
+		text-align: left;
+		padding-top: 8px;
+		padding-left: 14px;
+	}
+	#top #topMenu i {
+		text-align: left;
+		padding-top: 4px;
+	}
+
+	/*colonna 2 topTitle*/
+	#top #topTitle {
+		padding-top: 18px;
+		text-align: center;
+		font-size: 120%;
+		text-decoration: none;
+		/*text-shadow: 1px 1px 2px black;*/
+	}
+	/*colonna 3 topCont*/
+	#top #topCont {
+		font-size: 120%;
+		padding-top: 18px;
+		padding-right: 8px;
+	}
+	#top #topCont div {
+		position: absolute;
+		right: 18px;
+		min-height: 25px;
+		min-width: 25px;
+		text-align: right;
+	}
+	/*icona loading --> sistemo la sua posizione in modo migliore*/
+	#top #topCont div:last-child {
+		right: 18px;
+		top: 16px;
+	}	
+	/*icone e scritte su top*/
+	#pagina #top a, #top p, #top i {
+		text-decoration: none;
+		/*text-shadow: 1px 1px 2px black;*/
+	}
+
+/* ICONA DI MENU  - 3 barrette che poi diventano X */
+.menu-icon {
+  display: block;
+  width: 32px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.menu-icon:before, .menu-icon:after,
+.menu-icon .menu-icon-barra {
+  background: #000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 6px;
+  margin: 4px 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+/*.menu-icon .menu-icon__text {*/
+  /*text-indent: -9999px;*/
+/*}*/
+
+
+
+/* *************************************/
+/* TOP2 ********************************/
+/* *************************************/
+#pagina .top2
+{
+	width: 100%;
+	height: 52px;  /*ATT: settato anche in animation (marcalfa: $P*&#&$*&$)  */
+
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+
+	/*border-bottom: 1px solid darkgray;*/
+
+	background-color: #E0E0E0;
+
+	overflow: hidden;
+
+}
+
+#top2List .row>div {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	/*text-shadow: 1px 1px 2px gray;	*/
+	/*border: 1px solid #00ACC1;*/
+
+	/*-webkit-border-radius: 45px;*/
+	/*-moz-border-radius: 45px;*/
+	/*border-radius: 45px;*/
+
+	margin-top: 18px;
+	margin-bottom: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+
+	float: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+}
+/* il menu non attivo */
+#top2List .menu-disabled {
+	color: #BDBDBD;
+}
+/*quando a un div del top2 non serve il border*/
+#top2List .row .vuoto {
+	border: 0;
+	cursor: default;
+}
+#top2Item #top2ItemInput {
+	padding-top: 8px;
+	text-align: right;
+}
+#top2Item #top2ItemInput span input {
+	width: 100%;
+	text-transform: uppercase;
+}
+#top2Item #top2Add {
+	text-align: right;
+	padding-top: 11px;
+}
+
+
+
+/* *************************************/
+/* TOP3 ********************************/
+/* *************************************/
+.top3
+{
+
+	width: 100%;
+	/*height: 100px;*/
+
+	display: inline-block;
+
+	overflow: hidden;
+
+	/*text-align: center;*/
+	margin: 0 auto;
+
+	/*border-bottom: 1px solid #9E9E9E;*/
+
+	background-color: #E0E0E0;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+}
+.top3 #Top3ListName {
+	text-transform: uppercase;
+}
+
+
+/* *************************************/
+/* CONTENT RIGHE ***********************/
+/* *************************************/
+#contentRigheMaster {
+	z-index: 5;
+
+	position: absolute;
+	/*top: 52px;*/
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+ 	overflow-x: hidden;
+	/*overflow-y: scroll !important;*/
+	overflow-y: auto !important;
+	/* *** scrolling nativo **********/
+	-webkit-overflow-scrolling: touch;
+
+	/*background-color: black;*/
+
+	/*most browser vendors now provide graphical hardware acceleration by means of particular CSS rules.*/
+	/*will kick the GPU into action for the CSS transitions, making them smoother (higher FPS).*/
+	/* ****TEST**** */
+/*	-webkit-transform: translate3d(0,0,0);
+  	-moz-transform: translate3d(0,0,0);
+  	-ms-transform: translate3d(0,0,0);
+  	-o-transform: translate3d(0,0,0);
+  	transform: translate3d(0,0,0);
+*/  	/* .... */
+/*	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+*/
+
+}
+/*posizione in base a quali TOP sono mostrati*/
+.contentRigheMasterWithTop {
+	top: 52px;
+
+	-webkit-transition: all 0.6s ease-out;
+  	-moz-transition: all 0.6s ease-out;
+  	-ms-transition: all 0.6s ease-out;
+  	-o-transition: all 0.6s ease-out;
+  	transition: all 0.6s ease-out;
+}
+
+.contentRigheMasterWithTop2 {
+	top: 104px;
+}
+
+/* *************************************/
+
+
+#contentRigheMaster #contentRighe {
+	width: 100%;
+}
+/* *************************************/
+/* RIGHE ********************************/
+/* *************************************/
+#contentRighe ul {
+	list-style-type: none;
+	width: 100%;
+	/*padding: 0 0 200px 0;	*/
+	padding: 0;
+	margin: 0;
+}
+#contentRighe .righe {
+height: 60px; /* attenzione valore settato anche in animations.css (marcalfa: $%$872387$) */
+
+	overflow: hidden;
+	text-align: left;
+	border-top: 1px solid gray;
+	line-height: 1.3;
+}
+/*#contentRighe .righe:nth-child(odd) {
+	background-color: #eee;
+}
+*/
+#contentRighe .righe:last-child {
+	border-bottom: 1px solid gray;
+	margin-bottom: 1px;
+}
+#contentRighe .righe .row {
+	height: 100%;
+}
+
+
+/* **************** */
+/* colonna 1 ********/
+/* **************** */
+#contentRighe .righe #rigaCol1 {
+	height: 100%;
+	/*overflow: hidden;*/
+	white-space: nowrap;
+	padding-right: 2px;
+	padding-top: 8px;
+	z-index: 30;	
+}
+/*description*/
+#contentRighe .righe #rigaCol1 h4 {
+	margin: 3px 1px 1px 1px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+/*item data*/
+#contentRighe .righe #rigaCol1 span {
+	font-size: 70%;
+	margin: 9px 1px 0px 1px;
+	/*overflow: hidden;*/
+}
+/*la riga non e' cliccabile qui....*/
+#contentRighe .righe #rigaCol1>.alpha-no-select {
+	cursor: default;
+}
+
+/* **************** */
+/* colonna 2 ********/
+/* **************** */
+#contentRighe .righe #rigaCol2 {
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: right;
+
+	padding-right: 16px;
+	padding-top: 6px;
+	z-index: 29;
+
+}
+#contentRighe .righeList #rigaCol2 span {
+	padding-top: 14px;
+}
+
+#contentRighe .righe #rigaCol2 span {
+	display: inline-block;
+	min-width: 40px;
+	max-width: 40px;
+	/*height: 100%;*/
+}
+/*un po di margine all ultimo*/
+#contentRighe .righe #rigaCol2 span:last-child {
+	margin-right: 2px;
+}
+
+#contentRighe .righe #rigaCol2 span i {
+	margin-top: 6px;
+	margin-left: 16px;
+}
+
+#contentRighe .righe #rigaCol3 {
+	text-align: right;
+	overflow: hidden;
+	height: 100%;
+	white-space: nowrap;
+	background-color: #F5F5F5;
+	font-size: 140%;
+	margin: 0 auto;
+	padding: 0;
+	z-index: 31;	
+}
+#contentRighe .righe #rigaCol3 span i {
+	margin-top: 20px;
+	/*margin-left: 20px;*/
+}
+#contentRighe .righe #rigaCol3 span:last-child i{
+	margin-right: 4px;
+	color: #424242;
+}
+
+/*riga corrente*/
+#contentRighe .rigaCurrent {
+	/*background-color: #ffc107;*/
+	/*color: transparent;*/
+}
+#contentRighe .rigaCurrent span i{
+	color: transparent;
+}
+/*mentre viene cancellata*/
+#contentRighe .rigaCurrentDelete {
+	/*background-color: #000;*/
+}
+/*mentre viene archiviata*/
+#contentRighe .rigaCurrentArchive {
+	/*background-color: #b0120a;*/
+}
+
+
+
+
+
+
+
+/* *************************************/
+/* MEDIA QUERY PER DISPOSITIVI PIU GRANDI (questo css è pensato mobile-first) ********************************/
+/* *************************************/
+/*@media all and (min-width: 480px) {
+  header {
+    background: url(large-masthead-image.png);
+  }
+}*/
+
+
+/* ALTRO ********************************/
+
+
+

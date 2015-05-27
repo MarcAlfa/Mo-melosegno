@@ -1,0 +1,25 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" ng-show="title">
+                <h4 class="modal-title" ng-bind="title"></h4>
+            </div>
+            <div class="modal-body" ng-bind="content"></div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-5" ng-click="listDel()">
+                        <span> YES </span>
+                    </div>
+                    <!-- col vuoto -->
+                    <div class="col-xs-1 vuoto">
+                    </div>      
+                    <div class="col-xs-5" ng-click="$hide()">
+                        <span> NO </span>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-default" ng-click="DelList()">YES</button> -->
+                <!-- <button type="button" class="btn btn-default" ng-click="$hide()">NO</button> -->
+            </div>
+        </div>
+    </div>
+</div>

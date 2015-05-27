@@ -1,0 +1,148 @@
+<!--***************** -->
+<!-- **** PAGINA ITEMS **** -->
+<!-- ***************** -->
+<div id="pagina" class="container-fluid">
+
+
+	<!-- ***************** -->
+	<!-- **** TOP  MASTER **** -->
+	<!-- ***************** -->
+	<div alpha-no-touch-move id="contentTopMaster" >
+
+		<!-- ***************** -->
+		<!-- **** TOP  **** -->
+		<!-- ***************** -->
+		<div class="row" id="top">
+
+			<!-- COL 1  -->
+			<div class="colonna col-xs-2" id="topMenu">
+				<span>
+					<a href="#" ng-show="!loading_item" class="alpha-anim-fadeIn" ng-class="{'alpha-anim-topMenu': top2}" >
+						<i class="fa fa-chevron-left fa-2x"></i>
+					</a>
+				</span>
+			</div>
+
+			<!-- COL 2  -->
+			<div class="colonna col-xs-8">
+				<div id="topTitle" ng-show="!loading_item" class="alpha-anim-flip">
+					<!-- <a href="#">  -->
+						<p>{{listDesc}}</p> <div class="alpha-nascosto">{{listId}}</div> 
+					<!-- </a> -->
+				</div>
+			</div>
+
+			<!-- COL 3  -->
+			<div class="colonna col-xs-2" id="topCont" ng-click="ListRefreshItem()">
+				<span>
+					<div ng-show="!loading_item">
+						<a href="">
+							<p> {{(listItems) ? listItems.length : 0}} </p>
+					 	</a>
+					</div>
+					<div ng-show="loading_item">
+					 	<i class="fa fa-refresh fa-spin"></i>
+					</div>
+				</span>
+			</div>
+
+		</div>
+		<!-- **** fine TOP  **** -->
+
+
+
+
+
+		<!-- ***************** -->
+		<!-- **** TOP2 **** -->
+		<!-- ***************** -->
+		<div class="top2" ng-show="top2" id="top2Item">
+			<div class="row">
+
+				<!-- COL INPUT ITEM -->
+				<span class="col-xs-10" id="top2ItemInput">
+					<span>
+						<input class="form-control" ng-model='itemAddDesc' ng-max-length='30' type="text" name="itemAdd" value="" ng-keypress="($event.which === 13) ? AddItem() : 0">
+					</span>
+				</span>
+				
+				<!-- COL ADD icona -->
+				<div class="col-xs-2" id="top2Add">
+					<a href="" ng-click="AddItem()">
+						<span>  <i class="fa fa-plus fa-2x"> </i>  </span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- **** fine TOP2 **** -->
+
+	</div>
+	<!-- **** fine TOP MASTER **** -->
+
+
+
+
+
+	<!-- ***************** -->
+	<!-- **** LIST iTEMS **** -->
+	<!-- ***************** -->
+	<div id="contentRigheMaster" ng-show="!loading_item" class="contentRigheMasterWithTop" ng-class="{'contentRigheMasterWithTop2': top2}">
+		<div id="contentRighe">
+			<ul >
+				 <!-- <li ng-repeat="item in listItems track by item.itemDesc" class="righe" ng-class="getCurrentItemClass(item.itemDesc)"> ng-class="{'rigaCurrent': !loading_item}">  track by item.itemId -->
+				<li ng-repeat="item in listItems" class="righe" alpha-riga-current="{{item.itemDesc}}">	
+					<div class="row">
+						<div class="col-xs-7" id="rigaCol1">
+							<h4 class="alpha-selezionabile">{{item.itemDesc}}</h4>
+							<span>{{item.itemDate}}</span>
+							<!-- <span id="item_note">{{item.itemNote}}</span> -->
+						</div>
+						<div class="col-xs-5" id="rigaCol2">
+							<span id="itemCanc"> <a href="" ng-click='DelItem($index, item.itemDesc)'> <i class="fa fa-close fa-2x"> </i> </a> </span>
+							<span id="itemArch"> <a href="" ng-click='ArkItem($index, item.itemDesc)'> <i class="fa fa-check-circle fa-2x"> </i> </a> </span>
+						</div>					
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- **** fine LIST iTEMS **** -->
+
+
+</div>
+<!-- **** fine PAGINA **** -->
+
+
+<!-- ************* -->
+<!-- JAVA SCRIPT   -->  
+<!-- ************* -->
+<!-- codice....  -->
+<script>
+  	// DOM pronto  
+  	// $(document).ready( function() {
+  		// console.log("document ready");
+
+    	//FASTCLICK (abilita il touch su tutti i click)
+    	// $(function() {
+    	// 	FastClick.attach(document.body);
+    	// });
+
+    	// DISABILITATO !!!!!!!
+    	// iScroll
+		// var myScroll;
+		// function iScrollLoad () {
+		// 	// default
+		// 	// myScroll = new IScroll('#main');
+		// 	// bounce scrolling
+		// 	myScroll = new IScroll('#main', { bounceEasing: 'elastic', bounceTime: 1200 });
+		// }
+		// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+    	//AlphaSuperList in jQuery
+    	// window.AlphaSuperListMain({debug: true}).init();
+
+
+	// });
+  	// fine DOM pronto
+</script>

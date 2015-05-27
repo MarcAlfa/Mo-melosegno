@@ -1,0 +1,584 @@
+/* ********************** */
+/* GROUP e FRAME PAGINE */
+/* ********************** */
+
+/* don't forget about the vendor-prefixes! */
+
+
+
+
+/* ********************** */
+/* animazioni per oggetti del TOP in fase di caricamento */
+/* ********************** */
+.alpha-anim-fadeIn.ng-hide-remove {
+    -webkit-animation: alpha-anim-fadeIn 0.6s ease-out both;
+    animation: alpha-anim-fadeIn 0.6s ease-out both;
+}
+@-webkit-keyframes alpha-anim-fadeIn {from {opacity: 0;} to { opacity: 1;}}
+@keyframes alpha-anim-fadeIn {from { opacity: 0;} to { opacity: 1;}}
+/**/
+.alpha-anim-scaleUp.ng-hide-remove {
+    -webkit-animation: alpha-anim-scaleUp 3s ease-out both;
+    animation: alpha-anim-scaleUp 3s ease-out both;
+}
+@-webkit-keyframes alpha-anim-scaleUp {
+    from { opacity: 0; -webkit-transform: scale(.7); }
+}
+@keyframes alpha-anim-scaleUp {
+    from { opacity: 0; transform: scale(.7); }
+}
+/**/
+.alpha-anim-from-left.ng-hide-remove {
+
+    -webkit-animation: alpha-anim-from-left .6s ease-out both;
+    animation: alpha-anim-from-left .6s ease-out both;
+}
+@-webkit-keyframes alpha-anim-from-left {
+    0% {
+        -webkit-transform: translateX(-34px);    /*  attenzione '%' non funziona in safari, quindi uso 'px' */
+        transform: translateX(-34px);
+    }
+    
+}
+@keyframes alpha-anim-from-left {
+    0% {
+        -webkit-transform: translateX(-34px);
+        transform: translateX(-34px);
+    }
+}
+
+/*MENU che diventa X */
+.alpha-anim-topMenu:before {
+  -webkit-transform: rotate(45deg) translate3d(4px, 10px, 0);
+  -moz-transform: rotate(45deg) translate3d(4px, 10px, 0);
+  -ms-transform: rotate(45deg) translate3d(4px, 10px, 0);
+  -o-transform: rotate(45deg) translate3d(4px, 10px, 0);
+  transform: rotate(45deg) translate3d(4px, 10px, 0);
+}
+.alpha-anim-topMenu .menu-icon-barra {
+  opacity: 0;
+}
+.alpha-anim-topMenu:after {
+  -webkit-transform: rotate(-45deg) translate3d(4px, -10px, 0);
+  -moz-transform: rotate(-45deg) translate3d(4px, -10px, 0);
+  -ms-transform: rotate(-45deg) translate3d(4px, -10px, 0);
+  -o-transform: rotate(-45deg) translate3d(4px, -10px, 0);
+  transform: rotate(-45deg) translate3d(4px, -10px, 0);
+}
+
+
+
+/**/
+/*FLIP orizzontale*/
+.alpha-anim-flip.ng-hide-remove {
+    -webkit-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation: alpha-anim-flip .6s ease-out both;
+    animation: alpha-anim-flip .6s ease-out both;
+}
+@-webkit-keyframes alpha-anim-flip {
+    0% {
+       opacity: 0;
+       -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+       transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+       -webkit-animation-timing-function: ease-out;
+       animation-timing-function: ease-out;
+   }
+
+   40% {
+    -webkit-transform: perspective(400px) translateZ(0px) rotateY(170deg) scale(1);
+    transform: perspective(400px) translateZ(0px) rotateY(170deg) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+
+    50% {
+        -webkit-transform: perspective(400px) translateZ(0px) rotateY(190deg) scale(1);
+        transform: perspective(400px) translateZ(0px) rotateY(190deg) scale(1);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+        transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+    	opacity: 1;
+        -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+        transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes alpha-anim-flip {
+    0% {
+        opacity: 0;
+        -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+        -ms-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+        transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) translateZ(0px) rotateY(170deg) scale(1);
+        -ms-transform: perspective(400px) translateZ(0px) rotateY(170deg) scale(1);
+        transform: perspective(400px) translateZ(0px) rotateY(170deg) scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        -webkit-transform: perspective(400px) translateZ(0px) rotateY(190deg) scale(1);
+        -ms-transform: perspective(400px) translateZ(0px) rotateY(190deg) scale(1);
+        transform: perspective(400px) translateZ(0px) rotateY(190deg) scale(1);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+        -ms-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+        transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+       opacity: 1,  	
+       -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+       -ms-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+       transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+       -webkit-animation-timing-function: ease-in;
+       animation-timing-function: ease-in;
+   }
+}
+
+
+
+/* ********************** */
+/* TOP 2 */
+/* ********************** */
+/*.top2.ng-enter {
+    -webkit-transition: 1.6s ease-out all;
+    -moz-transition: 1.6s ease-out all;
+    -o-transition: 1.6s ease-out all;
+    transition: 1.6s ease-out all;
+}
+*/
+/*.top2.ng-leave {
+    -webkit-transition: 1.6s ease-out all;
+    -moz-transition: 1.6s ease-out all;
+    -o-transition: 1.6s ease-out all;
+    transition: 1.6s ease-out all;
+}
+*/
+
+/*.top2.ng-enter {
+    height: 0px;
+}
+*/
+/*.top2.ng-enter.ng-enter-active {*/
+    /*height: 0px;   ATT: settato anche in default (marcalfa: $P*&#&$*&$)  */
+/*}*/
+
+/*.top2.ng-leave {*/
+    /*height: 52px;  ATT: settato anche in default (marcalfa: $P*&#&$*&$)  */
+/*}*/
+
+/*.top2.ng-leave.ng-leave-active {*/
+    /*height: 52px;*/
+/*}*/
+
+
+
+/* ********************** */
+/* PAGINA 1 / LIST ITEMS */
+/* ********************** */
+/* from angularjs docs:
+** As ngRepeat does its thing, each time a new item is added into the list, 
+** ngRepeat will add a ng-enter class name to the element that is being added. 
+** when removed it will apply a ng-leave class name and 
+** when moved around it will apply a ng-move class name.
+*/
+
+/* ********************** */
+/*RIGHE */
+/* ********************** */
+/*ritardo tra 1 RIGA e l'altra in ng-repeat*/
+.righe.ng-enter-stagger {
+    transition-delay: 30ms;
+    -webkit-transition-delay: 30ms;
+
+    /*animation-delay: 200ms;*/
+    /*-webkit-animation-delay: 200ms;*/
+    /*-moz-animation-delay: 200ms;*/
+    /*-o-animation-delay: 200ms;*/
+}
+.righe.ng-leave-stagger {
+    /*transition-delay: 20ms;*/
+    /*-webkit-transition-delay: 20ms;*/
+
+    /*animation-delay: 200ms;*/
+    /*-webkit-animation-delay: 200ms;*/
+    /*-moz-animation-delay: 200ms;*/
+    /*-o-animation-delay: 200ms;*/
+}
+.righe.ng-enter { 
+    position: relative;
+    display: block;
+    -webkit-transition: 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -moz-transition: 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -ms-transition: 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -o-transition: 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    transition: 600ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+} 
+.righe.ng-enter {
+    -webkit-transform: rotateX(-180deg) translatez(30px);
+    -moz-transform: rotateX(-180deg) translatez(30px);
+    -ms-transform: rotateX(-180deg) translatez(30px);
+    -o-transform: rotateX(-180deg) translatez(30px);
+    transform: rotateX(-180deg) translatez(30px);
+    opacity: 0;
+    height: 0px;
+    /*background: #fff;*/
+}
+.righe.ng-enter.ng-enter-active {
+    -webkit-transform: rotateX(0deg) translatez(30px);
+    -moz-transform: rotateX(0deg) translatez(30px);
+    -ms-transform: rotateX(0deg) translatez(30px);
+    -o-transform: rotateX(0deg) translatez(30px);
+    transform: rotateX(0deg) translatez(30px);
+    opacity: 1;
+    height: 50px;  /* attenzione valore settato anche in default.css (marcalfa: $%$872387$)  */
+}
+
+/* ********************** */
+/*classi per singolo item... solo quando singolo, non quando svuoto tutta la lista*/
+/* ********************** */
+/* ********************** */
+/*DELETE*/
+/* ********************** */
+#contentRighe .rigaCurrentDelete.ng-leave { 
+    position: relative;
+    display: block;
+    opacity: 1;
+    background-color: #616161;
+    color: #fff;
+height: 60px; /* attenzione valore settato anche in default.css (marcalfa: $%$872387$) */
+    -webkit-transform: rotateX(0deg) translatez(30px);
+    -moz-transform: rotateX(0deg) translatez(30px);
+    -ms-transform: rotateX(0deg) translatez(30px);
+    -o-transform: rotateX(0deg) translatez(30px);
+    transform: rotateX(0deg) translatez(30px);
+
+    -webkit-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -moz-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -ms-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -o-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+} 
+#contentRighe .rigaCurrentDelete.ng-leave.ng-leave-active {
+    -webkit-transform: rotateX(-180deg) translatez(30px);
+    -moz-transform: rotateX(-180deg) translatez(30px);
+    -ms-transform: rotateX(-180deg) translatez(30px);
+    -o-transform: rotateX(-180deg) translatez(30px);
+    transform: rotateX(-180deg) translatez(30px);
+    opacity: 0;
+    height: 0px;
+}
+/* ********************** */
+/*ARCHIVE*/
+/* ********************** */
+#contentRighe .rigaCurrentArchive.ng-leave { 
+    position: relative;
+    display: block;
+    opacity: 1;
+    background-color: #00B8D4;    
+height: 60px; /* attenzione valore settato anche in default.css (marcalfa: $%$872387$) */
+    -webkit-transform: rotateY(0deg) translatez(-30px);
+    -moz-transform: rotateY(0deg) translatez(-30px);
+    -ms-transform: rotateY(0deg) translatez(-30px);
+    -o-transform: rotateY(0deg) translatez(-30px);
+    transform: rotateY(0deg) translatez(-30px);
+
+    -webkit-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -moz-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -ms-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -o-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+} 
+#contentRighe .rigaCurrentArchive.ng-leave.ng-leave-active {
+    -webkit-transform: rotateY(180deg) translatez(-30px);
+    -moz-transform: rotateY(180deg) translatez(-30px);
+    -ms-transform: rotateY(180deg) translatez(-30px);
+    -o-transform: rotateY(180deg) translatez(-30px);
+    transform: rotateY(180deg) translatez(-30px);
+    opacity: 0;
+    height: 0px;
+}
+
+
+/* ********************** */
+/* LIST: switch tra rigaCol2 e rigaCol3*/
+/* ********************** */
+/* da rivedere.. capire bene come fare, al momento va bene senza... MarcAlfa dic.2014
+#contentRighe .righe #rigaCol3.ng-hide-add,
+#contentRighe .righe #rigaCol3.ng-hide-remove {
+    -webkit-transition: 0.6s linear all;
+    -moz-transition: 0.6s linear all;
+    -o-transition: 0.6s linear all;
+    transition: 0.6s linear all;
+}
+#contentRighe .righe #rigaCol3.ng-hide,
+#contentRighe .righe #rigaCol3.ng-hide-add {
+  left: 0;
+}
+
+
+
+/* ********************** */
+/*ALERT*/
+/* ********************** */
+.alert_animation.ng-enter,
+.alert_animation.ng-move {
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+}
+.alert_animation.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+}
+.alert_animation.ng-enter,
+.alert_animation.ng-move {
+    opacity: 0;
+}
+.alert_animation.ng-enter.ng-enter-active,
+.alert_animation.ng-move.ng-move-active {
+    opacity: 1;
+}
+.alert_animation.ng-leave {
+    opacity: 1;
+}
+.alert_animation.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ********************** */
+/* ********************** */
+/* ********************** */
+/* ********************** */
+/* ********************** */
+/* ********************** */
+/* NON USATE al momento */
+/*animate*/
+/* ********************** */
+
+.slide-left.ng-enter,
+.slide-left.ng-leave,
+.slide-right.ng-enter,
+.slide-right.ng-leave {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: inherit;
+    -ms-transition: 1.25s ease-in-out;
+    -webkit-transition: 1.25s ease-in-out;
+    transition:  1.25s ease-in-out;
+}
+.slide-left.ng-enter {
+    z-index: 101;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.slide-left.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-left.ng-leave {
+    z-index: 100;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-left.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.slide-right.ng-enter {
+    z-index: 100;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.slide-right.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-right.ng-leave {
+    z-index: 101;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.slide-right.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+
+
+/*ANIMAZIONI PAGINA prese da timpanus*/
+
+/*.pt-page-moveToLeft {
+-webkit-animation: moveToLeft .6s ease both;
+-moz-animation: moveToLeft .6s ease both;
+animation: moveToLeft .6s ease both;
+}
+
+.pt-page-moveFromLeft {
+-webkit-animation: moveFromLeft .6s ease both;
+-moz-animation: moveFromLeft .6s ease both;
+animation: moveFromLeft .6s ease both;
+}
+
+.pt-page-moveToRight {
+-webkit-animation: moveToRight .6s ease both;
+-moz-animation: moveToRight .6s ease both;
+animation: moveToRight .6s ease both;
+}
+
+.pt-page-moveFromRight {
+-webkit-animation: moveFromRight .6s ease both;
+-moz-animation: moveFromRight .6s ease both;
+animation: moveFromRight .6s ease both;
+}
+
+.pt-page-moveToTop {
+-webkit-animation: moveToTop .6s ease both;
+-moz-animation: moveToTop .6s ease both;
+animation: moveToTop .6s ease both;
+}
+
+.pt-page-moveFromTop {
+-webkit-animation: moveFromTop .6s ease both;
+-moz-animation: moveFromTop .6s ease both;
+animation: moveFromTop .6s ease both;
+}
+
+.pt-page-moveToBottom {
+-webkit-animation: moveToBottom .6s ease both;
+-moz-animation: moveToBottom .6s ease both;
+animation: moveToBottom .6s ease both;
+}
+
+.pt-page-moveFromBottom {
+-webkit-animation: moveFromBottom .6s ease both;
+-moz-animation: moveFromBottom .6s ease both;
+animation: moveFromBottom .6s ease both;
+}
+*/
+
+/********************************* keyframes **************************************/
+
+/* move from / to  */
+
+/*@-webkit-keyframes moveToLeft {
+to { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveToLeft {
+to { -moz-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+to { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveFromLeft {
+from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+from { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveToRight { 
+to { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveToRight { 
+to { -moz-transform: translateX(100%); }
+}
+@keyframes moveToRight { 
+to { transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveFromRight {
+from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+from { transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveToTop {
+to { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes moveToTop {
+to { -moz-transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+to { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveFromTop {
+from { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes moveFromTop {
+from { -moz-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+from { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottom {
+to { -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveToBottom {
+to { -moz-transform: translateY(100%); }
+}
+@keyframes moveToBottom {
+to { transform: translateY(100%); }
+}
+
+@-webkit-keyframes moveFromBottom {
+from { -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveFromBottom {
+from { -moz-transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+from { transform: translateY(100%); }
+}
+*/
+

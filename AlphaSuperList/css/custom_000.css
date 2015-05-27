@@ -1,0 +1,122 @@
+/*
+**  MarcAlfa
+** 
+*/
+
+/* *************************************/
+/*tutti i tag A */
+/* *************************************/
+a {
+	color: #fff;
+	text-decoration: none;
+	/*text-shadow: 1px 1px 2px white;*/
+	display: inline-block;
+}
+a:hover 
+/*,a:active*/
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+#pagina {
+	background-color: #fff;
+}
+
+/* ************* */
+/* **** TOP **** */
+/* ************* */
+#pagina #top {
+	/*border-bottom: 1px solid lightgray;*/
+	background-color: #00838F;  /* #0097A7; */
+}
+/*icone e scritte su top*/
+#pagina #top a, #top p, #top i, #topMenu {
+	color: #fff;
+
+	text-decoration: none;
+	/*text-shadow: 1px 1px 2px white;*/
+}
+
+.menu-icon:before, .menu-icon:after,
+.menu-icon .menu-icon-barra {
+  background: #fff;
+}
+
+/*colonna 2 topTitle*/
+#pagina #top #topTitle {
+	/*text-shadow: 1px 1px 2px white;*/
+}
+
+/* ************* */
+/* **** TOP2 **** */
+/* ************* */
+#pagina .top2
+{
+	/*border-bottom: 1px solid #E0E0E0;*/
+	background-color: #0097A7;  /*#00ACC1;*/
+}
+#pagina #top2List .row>div{
+	color: #fff;
+}
+/*#top2List .menu-disabled {
+	color: #BDBDBD;
+}
+*/
+
+/* ************* */
+/* **** TOP3 **** */
+/* ************* */
+#pagina .top3
+{
+	/*border-bottom: 1px solid #E0E0E0;*/
+	background-color: #0097A7; /*#00ACC1;*/
+}
+
+/* ************* */
+/* **** RIGHE **** */
+/* ************* */
+#contentRigheMaster {
+	background-color: #F5F5F5;
+}
+
+#contentRighe .righe {
+	/*border-top: 1px solid gray;*/
+	/*background-color: #F5F5F5; */
+	/*color: #304ffe; */
+	/*text-shadow: 1px 1px 2px #fff; 	*/
+}
+/*description*/
+#contentRighe .righe #rigaCol1 h4 {
+	/*font-weight: bold;*/
+}
+/* data */
+#contentRighe .righe span {
+	/*color: white;*/
+}
+/* icone */
+#contentRighe .righe i  {
+	color: #00838F;
+	/*text-shadow: 1px 1px 2px #fff; */
+	/*text-shadow: none;*/
+}
+/* icone disattivate */
+#contentRighe .righe .fa-list-ol  {
+	color: #BDBDBD;
+	/*text-shadow: 1px 1px 2px #fff; */
+	/*text-shadow: none;*/
+}
+#contentRighe .righe .fa-share-alt  {
+	color: #BDBDBD;
+	/*text-shadow: 1px 1px 2px #fff; */
+	/*text-shadow: none;*/
+}
+
+
+
+/*#contentRighe .righe:nth-child(odd) {
+	background-color: #afbfff;
+}
+*/
+
