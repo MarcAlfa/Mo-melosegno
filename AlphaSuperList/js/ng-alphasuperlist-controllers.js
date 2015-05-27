@@ -341,7 +341,7 @@ AlphaSuperListControllers.controller('ctrlList', ['$scope', '$alert', '$modal', 
                         if ($scope.success_cod == 0) {
                             // OK - API
                             // aggiorno localStorage
-                            xLocalStorageList.push({ listId: data[1].list_cod});
+                            xLocalStorageList.push({ listId: data[1].list_cod.toUpperCase()});
                             var xLocalStorageList_json = JSON.stringify(xLocalStorageList);
                             localStorageService.set('lists',xLocalStorageList_json);
                             // aggiorno DOM
@@ -409,7 +409,7 @@ AlphaSuperListControllers.controller('ctrlList', ['$scope', '$alert', '$modal', 
                 var xcurrent_index = -1;
                 for (var i = 0; i < xarrayLength; i++) {
                     xcurrent = xLocalStorageList[i].listId;
-                    if ( xcurrent === $scope.delList.listId ) {
+                    if ( xcurrent.toUpperCase() === $scope.delList.listId.toUpperCase() ) {
                         xcurrent_index = i;
                     }
                 }
